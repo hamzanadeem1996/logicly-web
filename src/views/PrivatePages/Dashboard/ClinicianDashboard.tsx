@@ -35,6 +35,7 @@ let _week = [
   { head: 'Total Earning', accessor: 'distance' }
 ]
 let _daily = [{ head: 'Date' }, { head: 'Total Earning' }]
+let largestDataValue: any = undefined
 //
 class ClinicianDashboard extends Component<any, IState> {
   constructor (props: any) {
@@ -179,6 +180,7 @@ class ClinicianDashboard extends Component<any, IState> {
           dataset.data.push(_data)
         })
       })
+      largestDataValue = Math.max(...data)+50;
       MYCHART.update()
     }
   }
@@ -218,8 +220,8 @@ class ClinicianDashboard extends Component<any, IState> {
               {
                 ticks: {
                   beginAtZero: true,
-                  stepSize: 200,
-                  max: 1000
+                  stepSize: 50,
+                  max: largestDataValue
                 }
               }
             ]
