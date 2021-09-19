@@ -1,0 +1,108 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "App",
+  "author": {
+    "name": "App"
+  },
+  "contributors": [],
+  "homepage": ".",
+  "copyright": "",
+  "license": "",
+  "private": true,
+  "repository": {},
+  "dependencies": {
+    "@coreui/coreui": "^3.2.2",
+    "@coreui/react": "^3.0.3",
+    "@fullcalendar/core": "^5.8.0",
+    "@fullcalendar/daygrid": "^5.8.0",
+    "@fullcalendar/interaction": "^5.8.0",
+    "@fullcalendar/react": "^5.8.0",
+    "@fullcalendar/timegrid": "^5.8.0",
+    "@hookform/resolvers": "^0.1.1",
+    "@tippyjs/react": "^4.2.5",
+    "@types/chart.js": "^2.9.31",
+    "@types/datatables.net": "^1.10.19",
+    "@types/enzyme": "^3.10.6",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-alert": "^5.2.0",
+    "@types/react-countup": "^4.3.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-input-mask": "^3.0.0",
+    "@types/react-js-pagination": "^3.0.3",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-select": "^3.0.28",
+    "@types/react-table": "^7.0.29",
+    "@types/yup": "^0.29.7",
+    "axios": "^0.20.0",
+    "chart.js": "^2.9.4",
+    "core-js": "^3.6.5",
+    "datatables.net": "^1.10.21",
+    "date-fns": "^2.17.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.29.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-alert": "^7.0.2",
+    "react-alert-template-basic": "^1.0.0",
+    "react-app-polyfill": "^1.0.6",
+    "react-countup": "^4.3.3",
+    "react-datetime": "^3.0.4",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.8.2",
+    "react-input-mask": "^2.0.4",
+    "react-js-pagination": "^3.0.3",
+    "react-loader-spinner": "^3.1.14",
+    "react-promise-tracker": "^2.1.0",
+    "react-redux": "7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^3.1.1",
+    "reactjs-popup": "^2.0.4",
+    "redux": "4.0.5",
+    "sass": "^1.26.10",
+    "sha256": "^0.2.0",
+    "tippy.js": "^6.2.6",
+    "typescript": "^4.0.2",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@types/react-loader-spinner": "^3.1.0",
+    "react-scripts": "^3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "CI=false react-scripts build",
+    "test": "react-scripts test",
+    "test:cov": "npm test -- --coverage --watchAll=false",
+    "test:debug": "react-scripts --inspect-brk test --runInBand",
+    "eject": "react-scripts eject"
+  },
+  "bugs": {},
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 10",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/*index.js",
+      "!src/serviceWorker.js",
+      "!src/polyfill.js"
+    ]
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  }
+}

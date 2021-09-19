@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -102,3 +103,36 @@ dist
 
 # TernJS port file
 .tern-port
+=======
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/src/coreui-new
+/src/coreui-icons
+/src/coreui-charts
+
+# testing
+/coverage
+/src/coreui-new
+/src/coreui-icons
+/src/coreui-charts
+
+# production
+/build
+/src/coreui-new
+/src/coreui-icons
+/src/coreui-charts
+
+# misc
+.DS_Store
+.idea
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+>>>>>>> dfc0978744cb9895e766b80dc6a9eb651fcbe4f7
