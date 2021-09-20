@@ -11,6 +11,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridDayPlugin from '@fullcalendar/timegrid'
 import interactionPlugin, { Draggable } from '@fullcalendar/interaction'
 import Loader from 'react-loader-spinner'
+import '../../../scss/custom.css'
 interface IState {
   Data: any
   Events: any[]
@@ -999,6 +1000,7 @@ class CaseloadFullCalendar extends React.Component<any, IState> {
           <div className='col-md-12 flex-box full-calendar-footer'>
             {ActiveView == 'timeGridDay' ? (
               <div
+                id='semi-auto-btn'
                 className={`auto-schedule ${
                   this.state.APIStatus.InProgress ? 'is-disabled' : ''
                 }`}

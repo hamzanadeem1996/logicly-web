@@ -1,0 +1,14 @@
+
+.stick-to-bottom {
+  position: fixed;
+  bottom: 80px;
+  width: 41%;
+  z-index: 10;
+}
+
+#semi-auto-btn {
+  position: fixed;
+  bottom: 80px;
+  background-color: white;
+  z-index: 10;
+}
