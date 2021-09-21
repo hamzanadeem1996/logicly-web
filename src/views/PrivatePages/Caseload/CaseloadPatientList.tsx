@@ -13,6 +13,8 @@ import 'reactjs-popup/dist/index.css'
 import moment from 'moment'
 import SchedulingPopup from './SchedulingPopup'
 import InplaceConfirm from '../../../Controls/InplaceConfirm'
+import '../../../scss/custom.css'
+
 interface IState {
   activePage: number
   APIPageNumber: number
@@ -876,6 +878,43 @@ class CaseloadPatientList extends React.Component<any, IState> {
                 )}
               </tbody>
             </table>
+            <div id="legends">
+              <div className="legends-div">
+                <span id="RECERT" >
+                </span>&nbsp;
+                <span >
+                  RECERT
+                </span>
+              </div>
+              <div className="legends-div">
+                <span id="DISCHARGE" >
+                </span>&nbsp;
+                <span >
+                  DISCHARGE
+              </span>
+              </div>
+               <div className="legends-div">
+                <span id="EVALUATION" >
+                </span>&nbsp;
+                <span >
+                 EVALUATION
+              </span>
+              </div>
+              <div className="legends-div">
+                <span id="DRE" >
+                </span>&nbsp;&nbsp;
+                <span >
+                  30DRE
+                </span>
+              </div>
+              <div className="legends-div">
+                <span id="ROUTINEVISIT" >
+                </span>&nbsp;&nbsp;
+                <span >
+                  ROUTINEVISIT
+                </span>
+              </div>
+          </div>
           </div>
         </div>
         {/* {this.state.FilteredArray.length != 0 ? (
