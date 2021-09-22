@@ -206,11 +206,20 @@ const PatientDetail: React.FC = () => {
     }
     SetHaveData(true)
   }
+  // EOC should be 60 days from Initial Admission.
   var eocDate = detail.admission;
   var eocDateStr = String(eocDate);
   const newDate = new Date(eocDateStr);
   var finalEoc = newDate.setDate(newDate.getDate() + 60);
   var EOC = UTIL.getDate(finalEoc);
+
+  // 5-day window should start 5 days before the EOC
+  var fiveWindow;
+  if (detail.recert != '') {
+    var fWindow = new Date(finalEoc);
+    var finalFiveWindow = fWindow.setDate(fWindow.getDate() - 5);
+    fiveWindow = UTIL.getDate(finalFiveWindow);
+  }
   const saveData = async (data: any) => {
     try {
       if (params.id != undefined) {
@@ -668,7 +677,8 @@ const PatientDetail: React.FC = () => {
                     {/* Row 4 */}
                     <div className='col-md-4'>
                       <em>5 Day Window</em>
-                      <span>{detail.recert || 'N/A'}</span>
+                      {/* <span>{detail.recert || 'N/A'}</span> */}
+                      <span>{fiveWindow || 'N/A'}</span>
                     </div>
                     <div className='col-md-4'>
                       <em>End of Care</em>
