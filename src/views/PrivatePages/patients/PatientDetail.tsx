@@ -220,6 +220,17 @@ const PatientDetail: React.FC = () => {
     var finalFiveWindow = fWindow.setDate(fWindow.getDate() - 5);
     fiveWindow = UTIL.getDate(finalFiveWindow);
   }
+  // Upcoming 30DRE should be 30 days after the Initial Evaluation.
+  var DRE;
+  if (detail.evaluation != "N/A") {
+    if (detail.mostRecent30DRE != '') {
+      var initialEval = String(detail.evaluation);
+      const newEval = new Date(initialEval);
+      var finalDRE = newEval.setDate(newEval.getDate() + 30);
+      DRE = UTIL.getDate(finalDRE);
+    }  
+  }
+  
   const saveData = async (data: any) => {
     try {
       if (params.id != undefined) {
@@ -670,7 +681,8 @@ const PatientDetail: React.FC = () => {
                     <div className='col-md-4'>
                       <em>Upcoming 30DRE</em>
                       <span className='freq'>
-                        {detail.upcoming30DRE || 'N/A'}
+                        {/* {detail.upcoming30DRE || 'N/A'} */}
+                        {DRE || 'N/A'}
                       </span>
                     </div>
 
