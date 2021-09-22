@@ -132,7 +132,6 @@ const PatientDetail: React.FC = () => {
   const history = useHistory()
   const params: any = useParams()
   console.log('params.id', params.id)
-
   const { control, handleSubmit, errors, reset } = useForm<PatientList>({
     defaultValues: initialValues,
     mode: 'onBlur' // when the you blur... check for errors
@@ -207,7 +206,11 @@ const PatientDetail: React.FC = () => {
     }
     SetHaveData(true)
   }
-
+  var eocDate = detail.admission;
+  var eocDateStr = String(eocDate);
+  const newDate = new Date(eocDateStr);
+  var finalEoc = newDate.setDate(newDate.getDate() + 60);
+  var EOC = UTIL.getDate(finalEoc);
   const saveData = async (data: any) => {
     try {
       if (params.id != undefined) {
@@ -669,7 +672,8 @@ const PatientDetail: React.FC = () => {
                     </div>
                     <div className='col-md-4'>
                       <em>End of Care</em>
-                      <span>{UTIL.getDate(detail.eoc)}</span>
+                      {/* <span>{UTIL.getDate(detail.eoc)}</span> */}
+                      <span>{EOC}</span>
                     </div>
 
                     {/* Row 5 */}
